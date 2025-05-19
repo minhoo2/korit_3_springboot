@@ -23,7 +23,7 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import java.util.Arrays;
-// withDefaults()를 위해서 추가된 부분 -> static 메서드를 추가했기 때문에 comel case로 작성됨
+// withDefaults()를 위해서 추가된 부분-> static 메서드를 추가했기 때문에 camel case로 작성됨
 import static org.springframework.security.config.Customizer.withDefaults;
 
 @Configuration
@@ -54,7 +54,7 @@ public class SecurityConfig {
         return authConfig.getAuthenticationManager();
     }
 
-// AuthenticationFilter 이후
+    // AuthenticationFilter 이후
     // AuthEntryPoint 추가 이후
     // CORS 추가 이후
     @Bean
@@ -83,11 +83,10 @@ public class SecurityConfig {
         config.setAllowCredentials(false);
         config.applyPermitDefaultValues();
 
-        source.registerCorsConfiguration("/**",config);
+        source.registerCorsConfiguration("/**", config);
         return source;
+
     }
-
-
 
 
 
